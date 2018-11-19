@@ -110,7 +110,7 @@ $(document).ready(function () {
 
     // validate contact form
     $(function () {
-        $('#contact-form').validate({
+        $("#contact-form").validate({
             rules: {
                 name: {
                     required: true,
@@ -145,16 +145,16 @@ $(document).ready(function () {
                     data: $(form).serialize(),
                     url: "process.php",
                     success: function () {
-                        $('#contact :input').attr('disabled', 'disabled');
-                        $('#contact').fadeTo("slow", 1, function () {
+                        $("#contact :input").attr('disabled', 'disabled');
+                        $("#contact").fadeTo("slow", 1, function () {
                             $(this).find(':input').attr('disabled', 'disabled');
                             $(this).find('label').css('cursor', 'default');
-                            $('#success').fadeIn();
+                            $("#success").fadeIn();
                         });
                     },
                     error: function () {
-                        $('#contact').fadeTo("slow", 1, function () {
-                            $('#error').fadeIn();
+                        $("#contact").fadeTo("slow", 1, function () {
+                            $("#error").fadeIn();
                         });
                     }
                 });
